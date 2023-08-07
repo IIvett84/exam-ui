@@ -12,14 +12,15 @@ function createEl(tag, options) {
   function createBeerCard(cardNum, title, sub, text) {
     const cardDiv = createEl("div", { className: "card-div" });
     const cardNumEl = createEl("div", { className: "card-num", innerText: cardNum });
-    const button = createEl("div", { className: "button", innerText: "details" });
+    const button = createEl("div", { className: "button" });
+    const btnText = createEl("div", { className: "btn-text", innerText: "details" });
     const btnIcon = createEl("span", { className:"material-icons btn-icon", innerText: "arrow_forward"});
     const cardText = createEl("div", { className: "card-text" });
     const beerTitle = createEl("h1", { className: "beer-title", innerText: title });
     const line = createEl("HR");
     const beerSub = createEl("p", { className: "beer-sub", innerText: sub });
     const beerText = createEl("p", { className: "beer-text", innerText: text });
-    button.append(btnIcon);
+    button.append( btnText, btnIcon );
     cardText.append(beerTitle, line, beerSub, beerText);
     cardDiv.append(cardNumEl, button, cardText);
   

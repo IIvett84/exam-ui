@@ -21,6 +21,8 @@ body {
     align-items: center;
     border-bottom: 1px solid #145434;
     font-size: 36px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .best-beers {
@@ -95,7 +97,7 @@ main {
     color: #ffeedf;
 }
 
-.button {
+ .button {
     width: 200px;
     height: 50px;
     background-color: #ffeedf;
@@ -111,12 +113,23 @@ main {
     padding: 5px 15px; /* Több tér hozzáadása a lógás kiegyenlítéséhez */
     box-sizing: border-box; /* Az elem dobozmodell beállítása */
     border: 1px solid #145434;
+    text-align: center;
+
 }
 
 .button > .btn-icon {
-  display: flex;
-  justify-content: right;
+  margin-right: 10px;
+} 
+
+.button > .btn-icon::before {
+    margin-right: 5px; /* Kis tér az ikon és a felirat között */
 }
+
+.button > .btn-text {
+    flex: 1; /* Az ikon és a szöveg közötti teret kitölti a flex-box segítségével */
+}
+
+
 
 .button:hover{
   background-color: #145434;
